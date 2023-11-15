@@ -55,13 +55,3 @@
     order by t.amount_of_payments desc
 
     limit 1;
-
-
-
-
-
-
-
-
-
-

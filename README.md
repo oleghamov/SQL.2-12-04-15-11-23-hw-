@@ -4,9 +4,9 @@
 
     select concat(sf.first_name , ' ', sf.last_name) as 'LFMname Employee',
 
-	 cy.city,
+	        cy.city,
 
-	 COUNT(cr.customer_id) as 'Count Buyers'
+	        COUNT(cr.customer_id) as 'Count Buyers'
 		
     from sakila.store s
 
@@ -36,13 +36,13 @@
 
     select t.amount_of_payments,
 
-	 t.month_of_payments,
+	   t.month_of_payments,
 
-	 (select count(r.rental_id)
+	   (select count(r.rental_id)
 
-	 from sakila.rental r
+	   from sakila.rental r
 
-	 where DATE_FORMAT(r.rental_date, '%M %Y') = t.month_of_payments) 'count_of_rent'
+	   where DATE_FORMAT(r.rental_date, '%M %Y') = t.month_of_payments) 'count_of_rent'
 
     from (
 
